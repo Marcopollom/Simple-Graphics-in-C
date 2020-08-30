@@ -2,6 +2,9 @@
 #include "color.h"
 #include <stdbool.h>
 
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
+
 typedef struct Point
 {
     float x, y;

@@ -1,5 +1,10 @@
-#include <GL/glut.h>
-#include "color.h"
+#ifdef _WIN32 || __linux__
+  #include <GL/glut.h>
+#else
+  #include <GLUT/glut.h>
+#endif
+
+#include "../headers/color.h"
 
 void setColor(Color C)
 {

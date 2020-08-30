@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <GL/glut.h>
 #include <math.h>
 #include <stdbool.h>
-#include "shape.h"
-#include "helper.h"
+
+#include "../headers/everyone.h"
+
 #define pi  3.1415
 
 
@@ -40,15 +40,12 @@ void Rectangle(Point beg, Point end, bool Fill, Color color)
 	else
 	{
 		for (int i = beg.y; i <= end.y; i++)
-		{
 			for (int j = beg.x; j <= end.x; j++)
-			{
 				if (!(((j > beg.x) && (j < end.x) && ((i > beg.y) && (i < end.y)))))
 				{
 					glVertex2d(j, i);
 				}
-			}
-		}
+		
 	}
 	setColor(WHITE);
 }
@@ -92,9 +89,8 @@ void Triangle(Point Verticies[3], bool Fill, Color color)
 {
 	setColor(color);
 	if (Fill) {
-		for (int i = 0; i < 720; i++)
-		{
-			for (int j = 0; j < 1280; j++)
+		for (int i = 0; i < SCREEN_HEIGHT; i++)
+			for (int j = 0; j < SCREEN_WIDTH; j++)
 			{
 				Point P = { j,i };
 				if (inTriangle(Verticies, P))
@@ -102,7 +98,7 @@ void Triangle(Point Verticies[3], bool Fill, Color color)
 					glVertex2d(P.x, P.y);
 				}
 			}
-		}
+		
 	}
 	else
 	{
