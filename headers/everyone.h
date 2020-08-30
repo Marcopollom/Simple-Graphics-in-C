@@ -14,7 +14,7 @@
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 #define SCREEN_FPS 60
-#define PROGRAM_NAME "Test"
+#define PROGRAM_NAME "Window"
 
 
 #define APP_FILE "../app.c"

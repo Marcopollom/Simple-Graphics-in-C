@@ -20,3 +20,5 @@ void Triangle(Point Verticies[3], bool Fill, Color color);
 void Line(Point beg, Point end, Color color);
 
 void Polygon(int size, Point p[], Color c);
+
+void Pixel(float x, float y);

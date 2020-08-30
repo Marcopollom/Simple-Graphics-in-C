@@ -163,3 +163,8 @@ void Polygon(int size, Point p[], Color c)
 
 	Line(p[0], p[size - 1], c);
 }
+
+void Pixel(float x, float y)
+{
+	glVertex2f(x, y);
+}
